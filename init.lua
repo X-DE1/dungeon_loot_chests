@@ -124,8 +124,6 @@ if minetest.get_modpath("dungeon_loot") then
 		end,
 	})
 
-	-- dungeon_loot.register({name = "default:dirt", chance = 0.6, count = {2, 16}, y = {-64, 32768}, types = {"normal", "sandstone", "desert"}})
-
 	minetest.register_node("xde_loot:loot_chest",
 		{ description = "Loot chest",
 		tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_side.png", "default_chest_side.png", "default_chest_side.png", "default_chest_front.png"},
