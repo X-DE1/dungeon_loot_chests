@@ -24,7 +24,7 @@ Here are all the dungeon types that are already created:
 
 If you don't put count, the item in the loot will always be 1, if you don't put y, it will appear on any coordinate, if you don't put types, it will appear in all loot chests
 
-X-DE Loot was created with code from dungeon_loot by sfan5
+X-DE Loot was created with code from [dungeon_loot](https://github.com/luanti-org/minetest_game/tree/master/mods/dungeon_loot) by sfan5
 
 ## Installation
 
