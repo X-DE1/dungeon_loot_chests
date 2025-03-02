@@ -124,15 +124,6 @@ if minetest.get_modpath("dungeon_loot") then
 			end
 		end,
 	})
-
-	minetest.register_node("xde_loot:loot_chest",
-		{ description = "Loot chest",
-		tiles = {"default_chest_top.png", "default_chest_top.png", "default_chest_side.png", "default_chest_side.png", "default_chest_side.png", "default_chest_front.png"},
-		drawtype = "normal",
-		paramtype2 = "facedir",
-		groups = {choppy = 2, oddly_breakable_by_hand = 2},
-		sounds = default.node_sound_wood_defaults(),
-	})
 	
 	add_loot("loot_chest", "Loot chest", "default:chest")
 	add_loot("normal_loot_chest", "Normal loot chest", "default:chest", "normal")
@@ -142,7 +133,7 @@ if minetest.get_modpath("dungeon_loot") then
 	
 	if minetest.get_modpath("everness") then
 
-		minetest.register_node("xde_loot:everness_loot_chest",
+		minetest.register_node("dungeon_loot_chests:everness_loot_chest",
 			{ description = "Everness loot chest",
 			tiles = {"everness_chest_top.png", "everness_chest_top.png", "everness_chest_side.png", "everness_chest_side.png", "everness_chest_side.png", "everness_chest_front.png"},
 			drawtype = "normal",
@@ -151,7 +142,7 @@ if minetest.get_modpath("dungeon_loot") then
 			sounds = default.node_sound_wood_defaults(),
 		})
 		
-		add_loot_adv("xde_loot:everness_loot_chest", "everness:chest")
+		add_loot_adv("dungeon_loot_chests:everness_loot_chest", "everness:chest")
 
 	end
 	
