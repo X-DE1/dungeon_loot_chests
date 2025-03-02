@@ -1,6 +1,6 @@
-# X-DE Loot
+# Dungeon loot chests 
 
-Adds a loot chest, a command to prevent spawning loot in the chest so you can save a schematic with a loot chest:
+Adds a loot chests, a command to prevent spawning loot in the chest so you can save a schematic with a loot chest:
 <br>
 /loot enable
 <br>
@@ -24,19 +24,19 @@ Here are all the dungeon types that are already created:
 
 If you don't put count, the item in the loot will always be 1, if you don't put y, it will appear on any coordinate, if you don't put types, it will appear in all loot chests
 
-X-DE Loot was created with code from [dungeon_loot](https://github.com/luanti-org/minetest_game/tree/master/mods/dungeon_loot) by [sfan5](https://github.com/sfan5)
+Dungeon loot chests was created with code from [dungeon_loot](https://github.com/luanti-org/minetest_game/tree/master/mods/dungeon_loot) by [sfan5](https://github.com/sfan5)
 
 ## Installation
 
 ### ContentDB
 
 * Content > Browse Online Content
-* Search for "X-DE Loot"
+* Search for "Dungeon loot chests"
 * Click Install
 
 ### Manually
 
-- Unzip the archive, rename the folder to `xde_loot` and
+- Unzip the archive, rename the folder to `dungeon_loot_chests` and
 place it in `.../minetest/mods/`
 
 - GNU/Linux: If you use a system-wide installation place it in `~/.minetest/mods/`.
