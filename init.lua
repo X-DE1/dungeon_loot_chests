@@ -134,7 +134,11 @@ if minetest.get_modpath("dungeon_loot") then
 		sounds = default.node_sound_wood_defaults(),
 	})
 	
-	add_loot_adv("xde_loot:loot_chest", "default:chest")
+	add_loot("loot_chest", "Loot chest", "default:chest")
+	add_loot("normal_loot_chest", "Normal loot chest", "default:chest", "normal")
+	add_loot("sandstone_loot_chest", "Sandstone loot chest", "default:chest", "sandstone")
+	add_loot("desert_loot_chest", "Desert loot chest", "default:chest", "desert")
+	add_loot("ice_loot_chest", "Ice loot chest", "default:chest", "ice")
 	
 	if minetest.get_modpath("everness") then
 
