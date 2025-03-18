@@ -111,7 +111,6 @@ if minetest.get_modpath("dungeon_loot") then
 	end
 	
 	minetest.register_chatcommand("loot", {
-		params = "<enable/disable>",
 		description = "Disable or enable loot generation",
 		privs = {server = true},
 		func = function(name, param)
