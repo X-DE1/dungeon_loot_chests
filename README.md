@@ -20,7 +20,7 @@ register_loot("name", [[
 <br>
 	}]])
 
-Functions to create chests, furnaces, bookshelf, vessel with diferent loot:
+Functions to create chests, furnaces, bookshelf, vessel with diferent loot (dungeontype is optional):
 <br>
 add_loot_chest("name", "description", "mod:chest", item_list, "dungeontype")
 <br>
@@ -28,17 +28,17 @@ add_loot_bookshelf("name", "description", "mod:chest", item_list, "dungeontype")
 <br>
 add_loot_vessel("name", "description", "mod:chest", item_list, "dungeontype")
 <br>
-add_loot_furnace("name", "description", "mod:chest", item_list, "dungeontype")
+add_loot_furnace("name", "description", "mod:chest", item_list_fuel, item_list_dst, item_list_src, "dungeontype")
 <br>
 If you have the mod x_enchanting
 <br>
 add_loot_enchanting_table("name", "description", "mod:chest", item_list, "dungeontype")
 <br>
-add_loot_grindstone("name", "description", "mod:chest", item_list, "dungeontype")
+add_loot_grindstone("name", "description", "mod:chest", item_list_item, item_list_trade, "dungeontype")
 <br>
 If you have the mod s_brewing
 <br>
-add_loot_brewing_stand("name", "description", "mod:chest", item_list, "dungeontype")
+add_loot_brewing_stand("name", "description", "mod:chest", item_list_dst, item_list_vial, item_list_src, "dungeontype")
 
 You can add a new item to a item list with this function:
 <br>
