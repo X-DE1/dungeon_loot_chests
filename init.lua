@@ -99,23 +99,6 @@ if minetest.get_modpath("dungeon_loot") then
 		end
 	end
 	
-	function add_loot_chest_adv(node, chest, loot, dungeontype)
-		minetest.register_abm({
-			nodenames = {node},
-			interval = 1,
-			chance = 1,
-			action = function(pos)
-				if loot then
-					local facedir = minetest.get_node(pos).param2
-					minetest.remove_node(pos)
-					minetest.add_node(pos, {name = chest, param2 = facedir})
-					local noise = minetest.get_perlin(10115, 4, 0.5, 1)
-					populate(pos, PcgRandom(noise3d_integer(noise, pos)), "main", loot, dungeontype)
-				end
-		end,
-		})
-	end
-	
 	function add_loot_chest(name, description, chest, loot, dungeontype)
 		minetest.register_node(minetest.get_current_modname() .. ":" .. name,
 			{ description = description,
@@ -298,21 +281,6 @@ if minetest.get_modpath("dungeon_loot") then
 		{name = "default:gold_lump", chance = 0.1},
 	}]])
 	add_loot_furnace("loot_furnace", "Loot furnace", "default:furnace", furnace_fuel_loot, furnace_dst_loot, furnace_src_loot)
-	
-	if minetest.get_modpath("everness") then
-
-		minetest.register_node("dungeon_loot_chests:everness_loot_chest",
-			{ description = "Everness loot chest",
-			tiles = {"everness_chest_top.png", "everness_chest_top.png", "everness_chest_side.png", "everness_chest_side.png", "everness_chest_side.png", "everness_chest_front.png"},
-			drawtype = "normal",
-			paramtype2 = "facedir",
-			groups = {choppy = 2, oddly_breakable_by_hand = 2},
-			sounds = default.node_sound_wood_defaults(),
-		})
-		
-		add_loot_chest_adv("dungeon_loot_chests:everness_loot_chest", "everness:chest", dungeon_loot)
-
-	end
 	
 	if minetest.get_modpath("s_brewing") then
 		function add_loot_brewing_stand(name, description, chest, loot1, loot2, loot3, dungeontype)
