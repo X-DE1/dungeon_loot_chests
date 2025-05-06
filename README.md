@@ -1,28 +1,58 @@
 # Dungeon loot chests 
 
-Adds a loot chests, a command to prevent spawning loot in the chest so you can save a schematic with a loot chest:
+Adds:
+<br>
+A chests, furnaces, bookshelf, vessel with loot, a command to prevent spawning loot in the chests, furnaces, etc so you can save a schematic with a loot chest:
 <br>
 /loot enable
 <br>
 /loot disable
 
-Also adds 2 functions to create loot in other chests and/or with a different dungeon type (dungeon type is optional):
+Function to create a new loot item list:
 <br>
-add_loot("name", "description", "mod:chest", "dungeontype")
+register_loot("name", [[
 <br>
-add_loot_adv("mod:node", "mod:chest", "dungeontype")
+	{
+ <br>
+		{name = "default:dirt", chance = 0.6, count = {2, 16}, y = {-64, 32768}, types = {"normal", "sandstone", "desert"}},
+<br>
+		{name = "default:book", chance = 0.7},
+<br>
+	}]])
 
-You can add a new item to the loot pool with this function:
+Functions to create chests, furnaces, bookshelf, vessel with diferent loot:
 <br>
-dungeon_loot.register({name = "default:dirt", chance = 0.6, count = {2, 16}, y = {-64, 32768}, types = {"normal", "sandstone", "desert"}})
+add_loot_chest("name", "description", "mod:chest", item_list, "dungeontype")
+<br>
+add_loot_bookshelf("name", "description", "mod:chest", item_list, "dungeontype")
+<br>
+add_loot_vessel("name", "description", "mod:chest", item_list, "dungeontype")
+<br>
+add_loot_furnace("name", "description", "mod:chest", item_list, "dungeontype")
+<br>
+If you have the mod x_enchanting
+<br>
+add_loot_enchanting_table("name", "description", "mod:chest", item_list, "dungeontype")
+<br>
+add_loot_grindstone("name", "description", "mod:chest", item_list, "dungeontype")
+<br>
+If you have the mod s_brewing
+<br>
+add_loot_brewing_stand("name", "description", "mod:chest", item_list, "dungeontype")
+
+You can add a new item to a item list with this function:
+<br>
+name.register({name = "default:dirt", chance = 0.6, count = {2, 16}, y = {-64, 32768}, types = {"normal", "sandstone", "desert"}})
 
 If you want to create a new dungeon type only in types = {" "} write the new dungeontype
 
-Here are all the dungeon types that are already created:
-<br>
-"normal", "sandstone", "desert", "ice"
-
 If you don't put count, the item in the loot will always be 1, if you don't put y, it will appear on any coordinate, if you don't put types, it will appear in all loot chests
+
+This are all the item lists alredy created bookshelf_loot, vessel_loot, furnace_fuel_loot, furnace_dst_loot, furnace_src_loot and dungeon_loot for chests it has "normal", "sandstone", "desert", "ice" dungeontypes.
+
+If you have the mod s_brewing: brewing_stand_dst_loot, brewing_stand_vial_loot, brewing_stand_src_loot
+
+If you have the mod x_enchanting: enchanting_table_item_loot, enchanting_table_trade_loot, grindstone_loot
 
 Dungeon loot chests was created with code from [dungeon_loot](https://github.com/luanti-org/minetest_game/tree/master/mods/dungeon_loot) by [sfan5](https://github.com/sfan5)
 
