@@ -282,7 +282,7 @@ if minetest.get_modpath("dungeon_loot") then
 	}]])
 	add_loot_furnace("loot_furnace", "Loot furnace", "default:furnace", furnace_fuel_loot, furnace_dst_loot, furnace_src_loot)
 	
-	if minetest.get_modpath("s_brewing") then
+	if minetest.get_modpath("potions_brewing") then
 		function add_loot_brewing_stand(name, description, chest, loot1, loot2, loot3, dungeontype)
 			minetest.register_node(minetest.get_current_modname() .. ":" .. name,
 				{ description = description,
@@ -317,11 +317,11 @@ if minetest.get_modpath("dungeon_loot") then
 		end
 		register_loot("brewing_stand_dst_loot", [[
 		{
-			{name = "s_potions_default:water_brething", chance = 0.1},
-			{name = "s_potions_default:invulnerability", chance = 0.1},
-			{name = "s_potions_default:jump", chance = 0.1},
-			{name = "s_potions_default:gravity", chance = 0.1},
-			{name = "s_potions_default:speed", chance = 0.1},
+			{name = "potions_default:water_brething", chance = 0.1},
+			{name = "potions_default:invulnerability", chance = 0.1},
+			{name = "potions_default:jump", chance = 0.1},
+			{name = "potions_default:gravity", chance = 0.1},
+			{name = "potions_default:speed", chance = 0.1},
 		}]])
 		register_loot("brewing_stand_vial_loot", [[
 		{
@@ -336,7 +336,7 @@ if minetest.get_modpath("dungeon_loot") then
 			{name = "default:diamond", chance = 0.1},
 			{name = "default:obsidian_glass", chance = 0.1},
 		}]])
-		add_loot_brewing_stand("loot_brewing_stand", "Loot brewing stand", "s_brewing:stand", brewing_stand_dst_loot, brewing_stand_vial_loot, brewing_stand_src_loot)
+		add_loot_brewing_stand("loot_brewing_stand", "Loot brewing stand", "potions_brewing:stand", brewing_stand_dst_loot, brewing_stand_vial_loot, brewing_stand_src_loot)
 	end
 	
 	if minetest.get_modpath("x_enchanting") then
