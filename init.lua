@@ -48,7 +48,7 @@ if minetest.get_modpath("dungeon_loot") then
 		return ret
 	end
 
-	local function populate(pos, rand, meta, loot, dungeontype)
+	function populate(pos, rand, meta, loot, dungeontype)
 		--minetest.chat_send_all("chest placed at " .. minetest.pos_to_string(pos) .. " [" .. dungeontype .. "]")
 		--minetest.add_node(vector.add(pos, {x=0, y=1, z=0}), {name="default:torch", param2=1})
 
