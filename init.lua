@@ -1,5 +1,5 @@
 
-loot = true
+loot_permission = true
 
 if minetest.get_modpath("dungeon_loot") then
 
@@ -113,7 +113,7 @@ if minetest.get_modpath("dungeon_loot") then
 			interval = 1,
 			chance = 1,
 			action = function(pos)
-				if loot then
+				if loot_permission then
 					local facedir = minetest.get_node(pos).param2
 					minetest.remove_node(pos)
 					minetest.add_node(pos, {name = chest, param2 = facedir})
@@ -138,7 +138,7 @@ if minetest.get_modpath("dungeon_loot") then
 			interval = 1,
 			chance = 1,
 			action = function(pos)
-				if loot then
+				if loot_permission then
 					local facedir = minetest.get_node(pos).param2
 					minetest.remove_node(pos)
 					minetest.add_node(pos, {name = chest, param2 = facedir})
@@ -163,7 +163,7 @@ if minetest.get_modpath("dungeon_loot") then
 			interval = 1,
 			chance = 1,
 			action = function(pos)
-				if loot then
+				if loot_permission then
 					local facedir = minetest.get_node(pos).param2
 					minetest.remove_node(pos)
 					minetest.add_node(pos, {name = chest, param2 = facedir})
@@ -188,7 +188,7 @@ if minetest.get_modpath("dungeon_loot") then
 			interval = 1,
 			chance = 1,
 			action = function(pos)
-				if loot then
+				if loot_permission then
 					local facedir = minetest.get_node(pos).param2
 					minetest.remove_node(pos)
 					minetest.add_node(pos, {name = chest, param2 = facedir})
@@ -210,10 +210,10 @@ if minetest.get_modpath("dungeon_loot") then
 		privs = {server = true},
 		func = function(name, param)
 			if param == "disable" then
-				loot = false
+				loot_permission = false
 				minetest.chat_send_player(name, "Loot generation disabled")
 			elseif param == "enable" then
-				loot = true
+				loot_permission = true
 				minetest.chat_send_player(name, "Loot generation enabled")
 			end
 		end,
@@ -299,7 +299,7 @@ if minetest.get_modpath("dungeon_loot") then
 				interval = 1,
 				chance = 1,
 				action = function(pos)
-					if loot then
+					if loot_permission then
 						local facedir = minetest.get_node(pos).param2
 						minetest.remove_node(pos)
 						minetest.add_node(pos, {name = chest, param2 = facedir})
@@ -354,7 +354,7 @@ if minetest.get_modpath("dungeon_loot") then
 				interval = 1,
 				chance = 1,
 				action = function(pos)
-					if loot then
+					if loot_permission then
 						local facedir = minetest.get_node(pos).param2
 						minetest.remove_node(pos)
 						minetest.add_node(pos, {name = chest, param2 = facedir})
@@ -405,7 +405,7 @@ if minetest.get_modpath("dungeon_loot") then
 				interval = 1,
 				chance = 1,
 				action = function(pos)
-					if loot then
+					if loot_permission then
 						local facedir = minetest.get_node(pos).param2
 						minetest.remove_node(pos)
 						minetest.add_node(pos, {name = chest, param2 = facedir})
